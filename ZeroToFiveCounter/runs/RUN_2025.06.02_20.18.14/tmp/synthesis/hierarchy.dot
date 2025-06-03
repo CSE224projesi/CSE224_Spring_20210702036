@@ -1,0 +1,12 @@
+digraph "TopModule" {
+label="TopModule";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="count", color="black", fontcolor="black" ];
+n2 [ shape=octagon, label="rst", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+c4 [ shape=record, label="{{<p3> clk|<p2> rst}|counter\nZeroToFiveCounter|{<p1> count}}",  ];
+c4:p1:e -> n1:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n2:e -> c4:p2:w [color="black", fontcolor="black", label=""];
+n3:e -> c4:p3:w [color="black", fontcolor="black", label=""];
+}
